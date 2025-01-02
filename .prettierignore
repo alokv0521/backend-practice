@@ -1,0 +1,11 @@
+# we are doing it because sometimes prettier do some misconfiguration with it
+
+
+./node_modules
+./vscode
+./dist
+
+
+*.env
+.env
+.env.*
