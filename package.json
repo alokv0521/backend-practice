@@ -1,0 +1,23 @@
+{
+  "name": "backend-practice",
+  "version": "1.0.0",
+  "description": "a full fleshed fullstack app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alokv0521/backend-practice.git"
+  },
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
+  "author": "Alok Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alokv0521/backend-practice/issues"
+  },
+  "homepage": "https://github.com/alokv0521/backend-practice#readme"
+}
