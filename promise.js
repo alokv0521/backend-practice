@@ -32,6 +32,4 @@ promiseOne
 })
 ;
 
-
-
 // console.log("we are working");
