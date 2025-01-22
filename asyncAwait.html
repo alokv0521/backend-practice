@@ -1,0 +1,57 @@
+
+<!-- javascript is sycncronous language. It means that it will execute the code line by line. But there are some cases where we need to execute the code asynchronously. For example, when we are fetching data from the server, we don't know how much time it will take to get the data. So, we can't wait for the data to come and then execute the next line of code. In such cases, we can use async and await.
+
+it is single threaded. It means that it can execute only one task at a time. But with the help of async and await, we can execute multiple tasks at the same time. -->
+<!-- 
+execution in js 
+
+each executuion wait for the previous one to complete -->
+
+<!-- blocking vs non blocking code in js  -->
+
+<!-- reading file async is good 
+
+why non blocking code is not always  good  -->
+
+<!-- depending upon the usecase , we are using blocking or non blocking code --> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asynAwait</title>
+</head>
+<body>
+    <h1>AsyncAwait</h1>
+    
+    <button id="btn">Click</button>
+</body>
+<script>
+    // const alok=function(){
+    //     console.log("This is setTimeout function");
+    // }
+    // setTimeout(alok, 3000);
+
+    // console.log("This is console.log function");
+
+    // a function to change the h1 heading 
+    const changeHeading=function(){
+        document.querySelector("h1").innerText="Changed to AsyncAwait";
+        console.log("Heading changed");
+    }
+     const changeme =setTimeout(changeHeading, 3000);
+
+    // now i will be selection button and then will be adding an event listern to it to perform the stop of chageHeading function ... basically i will be stopping the changeHeading function with help of clearTimeout function
+    const button = document.getElementById('btn');
+
+    const stopChangeHeading=function(){
+        clearTimeout(changeme);
+        console.log("Change heading stopped");
+    }
+    button.addEventListener('click',stopChangeHeading);
+
+</script>
+</html>
+
+

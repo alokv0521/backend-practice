@@ -1,0 +1,63 @@
+<!-- lets talk about the brief history of apis 
+
+previously we used to handle the api in format of xml ( extensible markup language ) but now we are using json ( javascript object notation )
+
+in case of xml we were using AJAX ( Asynchronous JavaScript and XML ) but now we are using fetch api -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api handling</title>
+</head>
+<body>
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+
+<br>
+<img id="login_image" src="" alt="login image">
+<br>
+<button id="btn">
+click to get the image
+</button>
+    
+</body>
+<script>
+    // const requestUrl = "https://api.github.com/users/indomitablefire2010";
+    const requestUrl = "https://api.github.com/users/alokv0521";
+
+   const request= function(){
+    
+
+    const xmlr= new XMLHttpRequest();
+    xmlr.open('GET', requestUrl);
+
+    xmlr.onreadystatechange=function(){
+        console.log(xmlr.readyState);
+        
+        if(xmlr.readyState===4) {
+            const response=JSON.parse(this.response);
+
+            console.log(response)
+            // instead we can use xmlr.response
+           
+            document.getElementById('login_image').src=response.avatar_url;
+        }
+    }
+
+
+    xmlr.send()
+
+
+   }
+
+
+
+    document.getElementById('btn').addEventListener('click',request);
+
+</script>
+</html>
