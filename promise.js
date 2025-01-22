@@ -22,12 +22,3 @@ promiseOne
     return username  
 }    
 )
-.then((username)=>{
-    console.log("we are giving you the latest username if exist "+username);
-    
-})
-.catch((e)=>{
-    console.log(e);
-    
-})
-;
